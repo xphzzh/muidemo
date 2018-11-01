@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">标题</h1>
+    </header>
+    
+    <div class="mui-content" id="app">
+    	<p>姓名: {{ name }}</p>
+      <p>城市: {{ city }}</p>
+      <img :src="img" id="img"/>
+    </div>
+    
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script type="text/javascript">
+    mui.init()
+    mui.plusReady(function() {
+    	console.log(JSON.stringify(plus.webview.currentWebview()))
+    	var info = plus.webview.currentWebview().info
+    	
+    	var city = plus.webview.currentWebview().infoCity;
+      var name = plus.webview.currentWebview().infoName;
+      var img = plus.webview.currentWebview().infoImg;
+
+	    vm.city = city;
+	    vm.name = name;
+    	vm.img = img;
+    	
+    	
+    })
+    
+    
+    var vm = new Vue({
+    	el: '#app',
+    	data: {
+				name: '',
+				img: '',
+				city: ''
+    	}
+    })
+    </script>
+</body>
+</html>

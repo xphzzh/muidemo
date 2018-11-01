@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">标题</h1>
+		</header>
+
+		<!--内容区域-->
+		<div class="mui-content">
+		  <div id="slider" class="mui-slider" >
+		    <div class="mui-slider-group mui-slider-loop">
+		      <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		      <div class="mui-slider-item mui-slider-item-duplicate">
+		        <a href="#">
+		          <img src="img/pic4.jpg">
+		        </a>
+		      </div>
+		      <!-- 第一张 -->
+		      <div class="mui-slider-item">
+		        <a href="#">
+		          <img src="img/pic1.jpg">
+		        </a>
+		      </div>
+		      <!-- 第二张 -->
+		      <div class="mui-slider-item">
+		        <a href="#">
+		          <img src="img/pic2.jpg">
+		        </a>
+		      </div>
+		      <!-- 第三张 -->
+		      <div class="mui-slider-item">
+		        <a href="#">
+		          <img src="img/pic3.jpg">
+		        </a>
+		      </div>
+		      <!-- 第四张 -->
+		      <div class="mui-slider-item">
+		        <a href="#">
+		          <img src="img/pic4.jpg">
+		        </a>
+		      </div>
+		      <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		      <div class="mui-slider-item mui-slider-item-duplicate">
+		        <a href="#">
+		          <img src="img/pic1.jpg">
+		        </a>
+		      </div>
+		    </div>
+		    <div class="mui-slider-indicator">
+		      <div class="mui-indicator mui-active"></div>
+		      <div class="mui-indicator"></div>
+		      <div class="mui-indicator"></div>
+		      <div class="mui-indicator"></div>
+		    </div>
+		  </div>  
+		</div>
+
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-bars"></span>
+		        <span class="mui-tab-label">分类</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-email"></span>
+		        <span class="mui-tab-label">邮件</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">设置</span>
+		    </a>
+		</nav>
+
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init(
+				{
+			    subpages:[{
+			      url:'list.html',
+			      id:'list.html',
+			      styles:{
+			        top:'273px',//mui标题栏默认高度为45px；
+			        bottom:'50px'//默认为0px，可不定义；
+			      }
+			    }]
+			  }
+			)
+		</script>
+	</body>
+
+</html>

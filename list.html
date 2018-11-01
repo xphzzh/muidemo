@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+	</head>
+
+	<body>
+
+		<div class="mui-content" id="app">
+			<!--mlist 图片列表-->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media" v-for="(item, index) in list" :key="index"  :city="item.city" :name="item.realName" :img="item.avatarUrl">
+					<img class="mui-media-object mui-pull-left" :src="item.avatarUrl">
+					<div class="mui-media-body">
+						{{item.realName}}
+						<p class="mui-ellipsis">{{item.city}}</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+		<script src="js/list.js"></script>
+	</body>
+
+</html>
